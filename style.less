@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@color: #0B85FF;
+@white: #FFF;
+@linear: linear-gradient(45deg, #68EACC, #497BE8);
+@borderColor: #CCC;
+
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+}
+
+body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     min-height: 100vh;
+     background-image: @linear;
+}
+
+.wrapper {
+     max-width: 600px;
+     width: 100%;
+     border-radius: 0.5rem;
+     padding: 25px;
+     background-color: @white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+
+     header {
+          font-size: 30px;
+          font-weight: 600;
+          background-color: @white;
+          color: @color;
+          border: 1px solid @borderColor;
+          width: 100%;
+          text-align: center;
+          border-radius: inherit;
+          margin-bottom: 20px;
+     }
+
+     .inputField {
+          display: flex;
+          height: 45px;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 12px;
+
+          input {
+               width: 85%;
+               height: 40px;
+               border: 1px solid @borderColor;
+               outline: none;
+               padding: 8px 12px;
+               border-radius: 0.5rem;
+          }
+
+          button {
+               border: 1px solid @borderColor;
+               color: @color;
+               width: 40px;
+               height: 40px;
+               background-color: @white;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               cursor: pointer;
+               border-radius: 0.5rem;
+               margin-left: 5px;
+               transition: 0.2s ease-in-out;
+               path {
+                    stroke: @color;
+                    transition: 0.2s ease-in-out;
+               }
+               &:hover{
+                    background-color: @color;
+                    color: @white;
+                    border-color: transparent;
+                    path{
+                         stroke: @white;
+                    }
+               }
+               &.disable{
+                    opacity: 0.6;
+                    pointer-events: none;
+               }
+          }
+     }
+
+     .list {
+          display: block;
+          margin: 10px 0;
+          width: 100%;
+          overflow-y: auto;
+          padding-top: 20px;
+          li {
+               line-height: 45px;
+               width: 100%;
+               display: flex;
+               justify-content: space-between;
+               list-style: none;
+
+               span {
+                    cursor: pointer;
+                    transition: 0.2s ease-in-out;
+                    background-color: @white;
+                    display: flex;
+                    width: 30px;
+                    height: 30px;
+                    justify-content: center;
+                    align-items: center;
+                    transform: translateY(-2px);
+                    border-radius: 0.5rem;
+                    border: 1px solid @borderColor;
+                    svg{
+                         path{
+                              stroke: #111;
+                         }
+                    }
+                    &:hover{
+                         border-radius: 100%;
+                    }
+               }
+          }
+     }
+     .footer{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 10px;
+          background-color: @white;
+          width: 100%;
+          font-size: 18px;
+          border: 1px solid @borderColor;
+          border-radius: 0.5rem;
+          padding: 6px 15px;
+          color: @color;
+          font-weight: 500;
+          button{
+               padding: 5px 6px;
+               background-color: @white;
+               color: @color;
+               border: 1px solid @borderColor;
+               border-radius: 0.5rem;
+               cursor: pointer;
+               &:hover{
+                    background-color: @color;
+                    color: @white;
+                    border-color: transparent;
+               }
+          }
+     }
+}

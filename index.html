@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <title>Todo List</title>
+</head>
+
+<body>
+     <div class="wrapper">
+          <header>Todo App</header>
+          <div class="inputField">
+               <input type="text" placeholder="Add New Todo">
+               <button class="disable">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M6 12H18" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                         <path d="M12 18V6" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                    </svg>
+               </button>
+          </div>
+          <ul class="list">
+               <p style="text-align: center;color: red;">Empty</p>
+          </ul>
+          <div class="footer">
+               <span>You have <span class="number">0</span> task</span>
+               <button onclick="deleteAll()">Clear All</button>
+          </div>
+     </div>
+
+     <script src="script.js"></script>
+</body>
+
+</html>
